@@ -1,108 +1,219 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Projeto Via Varejo (HTML,CSS e JS)</title>
-        <meta charset="UTF-8" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
-        <style>
-            .content{
-                font-family: 'Lato', sans-serif;
-                font-size: 16px;
-                background-color: rgb(255,255,255);
-            }
-            h3{
-                text-align: center
-            }
-            .header{
-                background-color: rgb(224, 224, 224);
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 3px;
-                height: 50px;
-                margin-bottom: 10px;
-            }
-            .logo {
-                display: flex;
-                flex-direction: row;
-            }
-            button {
-                border: none;
-                color: black;
-                text-align: center;
-                text-decoration: none;
-                cursor: pointer;
-                float: left;
-            }
 
-            .butons {
-                display: flex;
-                flex-wrap: nowrap;
-            }
-            .button-form{
-                background-color: black;
-                color: white;
-            }
-            .form-new-transition{
-                display: flex;
-                flex-direction: column;
-                width: 40%;
-                border: solid 1px;
-                padding: 10px;
-            }
-            .hero{
-                display: flex;
-                flex-direction: row;
-            }
-            .historic{
-                display: flex;
-                flex-direction: column;
-                width: 60%;
-                margin-left: 30px;
-            }
-            .inp-valor{
-                margin-bottom: 50px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="content">
-            <div class="header">
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo" />
-                    <h3 class="title-header">Controle Financeiro</h3>
-                </div>
-                <div class="buttons">
-                    <button>Limpar Dados</button>
-                    <button>Cadastro de Transação</button>
-                    <button>Salvar no Servidor</button>
-                    <button style="display: none;">X</button>
-                </div>
+<head>
+    <title>Projeto Via Varejo (HTML,CSS e JS)</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        .content {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        h3 {
+            text-align: center
+        }
+
+        .header {
+            background-color: rgb(224, 224, 224);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+        }
+
+        button {
+            border: none;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            float: left;
+        }
+
+        .butons {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .button-form {
+            background-color: black;
+            color: white;
+        }
+
+        .form-new-transition {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 344px;
+            min-width: 400px;
+            min-height: 344px;
+            border: solid 1px;
+            padding: 10px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .historic {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            margin-left: 30px;
+        }
+
+        .inp-valor {
+            margin-bottom: 50px;
+        }
+
+        .description-historic {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid black;
+        }
+
+        .linha1-historic {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .esq-linha1 {
+            display: flex;
+            width: 400px
+        }
+
+        .value-linha1-historic {
+            text-align: center;
+            width: 53%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo" />
+                <h3 class="title-header">Controle Financeiro</h3>
             </div>
-            <div class="hero">
-                <div class="form-new-transition">             
-                    <h3>Nova Transação</h3>
-                    <label>Tipo Transação</label>
-                    <select>
-                        <option>Compra</option>
-                        <option>Venda</option>
-                    </select>
-                    <label>Nome da Mercadoria</label>
-                    <input type="text"/> 
-                    <label>Valor</label>
-                    <input type="number" class="inp-valor"/>
-                    <button class="button-form">
-                        Adicionar Transação
-                    </button>
-                </div>
-                <div class="historic">
-                    <h3>Histórico de Transação</h3>
-                </div>    
+            <div class="buttons">
+                <button>Limpar Dados</button>
+                <button>Cadastro de Transação</button>
+                <button>Salvar no Servidor</button>
+                <button style="display: none;">X</button>
             </div>
-            
-                        
         </div>
-    </body>
+        <div class="hero">
+            <div class="form-new-transition">
+                <h3>Nova Transação</h3>
+                <label>Tipo Transação</label>
+                <select>
+                    <option>Compra</option>
+                    <option>Venda</option>
+                </select>
+                <label>Nome da Mercadoria</label>
+                <input type="text" />
+                <label>Valor</label>
+                <input type="number" class="inp-valor" />
+                <button class="button-form">
+                    Adicionar Transação
+                </button>
+            </div>
+            <div class="historic">
+                <h3>Extrato de Transação</h3>
+                <div>
+                    <div class="description-historic">
+                        <div class="title-historic">
+                            Mercadoria
+                        </div>
+                        <div>
+                            Valor
+                        </div>
+                    </div>
+                    <div class="linha1-historic">
+                        <div class="esq-linha1">
+                            <div>
+                                +
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit, amet
+                                consectetur
+                            </div>
+                        </div>
+                        <div class="value-linha1-historic">
+                            R$ 12.999,99
+                        </div>
+                    </div>
+                    <div>
+                        <div class="description-historic">
+                            <div class="title-historic">
+                                Mercadoria
+                            </div>
+                            <div>
+                                Valor
+                            </div>
+                        </div>
+                        <div class="linha1-historic">
+                            <div class="esq-linha1">
+                                <div>
+                                    +
+                                </div>
+                                <div>
+                                    Lorem ipsum dolor sit, amet
+                                    consectetur
+                                </div>
+                            </div>
+                            <div class="value-linha1-historic">
+                                R$ 12.999,99
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="description-historic">
+                            <div class="title-historic">
+                                Mercadoria
+                            </div>
+                            <div>
+                                Valor
+                            </div>
+                        </div>
+                        <div class="linha1-historic">
+                            <div class="esq-linha1">
+                                <div>
+                                    +
+                                </div>
+                                <div>
+                                    Lorem ipsum dolor sit, amet
+                                    consectetur
+                                </div>
+                            </div>
+                            <div class="value-linha1-historic">
+                                R$ 12.999,99
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+</body>
+
 </html>
