@@ -4,13 +4,16 @@
 <head>
     <title>Projeto Via Varejo (HTML,CSS e JS)</title>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <style>
-        .content {
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Lato', sans-serif;
-            font-size: 18px;
-            background-color: rgb(255, 255, 255);
         }
 
         h3 {
@@ -24,32 +27,72 @@
             justify-content: space-between;
             align-items: center;
             padding: 3px;
-            height: 50px;
+            min-height: 70px;
+            min-width: 800px;
             margin-bottom: 10px;
+            padding: 0px 30px;
         }
 
         .logo {
             display: flex;
             flex-direction: row;
+            align-items: center;
         }
 
-        button {
-            border: none;
-            color: black;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            float: left;
+        .logo-img {
+            height: 60px;
+            width: 100px;
+
         }
 
-        .butons {
-            display: flex;
-            flex-wrap: nowrap;
+        .title-header {
+            font-size: 1.7rem;
+            margin-left: 30px;
+            
+
         }
+        /* UL para responsividade responsividade */
+        /* ul {
+            background-color: black;
+            color: white;
+            position: fixed;
+            right: 0;
+            top: 0;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            list-style-type: none;
+        } */
 
         .button-form {
             background-color: black;
             color: white;
+        }
+
+        .hamburguer {
+            color: black;
+            font-size: 1.7rem;
+        }
+        .menu{
+            display: flex;
+            flex-direction: row;
+        }
+        .list-menu{
+            position: relative;
+            width: 350px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            text-align: center;
+            background-color: white;
+            padding: 1px;
+            
+        }
+        nav ul li:hover{
+            background-color:white;
+            color: black;
+            cursor: pointer;
         }
 
         .form-new-transition {
@@ -106,14 +149,23 @@
     <div class="content">
         <div class="header">
             <div class="logo">
-                <img src="img/logo.png" alt="logo" />
-                <h3 class="title-header">Controle Financeiro</h3>
-            </div>
-            <div class="buttons">
-                <button>Limpar Dados</button>
-                <button>Cadastro de Transação</button>
-                <button>Salvar no Servidor</button>
-                <button style="display: none;">X</button>
+                <img class="logo-img" src="img/logo.png" alt="logo" />
+                <span class="title-header">
+                    Controle Financeiro
+                </span>
+            </div class="menu">
+                <nav>
+                    <ul class="list-menu">
+                        <li class>Limpar Dados</li>
+                        <hr>
+                        <li class>Cadastro de Transação</li>
+                        <hr>
+                        <li>Salvar no Servidor</li>
+                        <li style="display: none;">X</li>
+                    </ul>
+                </nav>
+            <div style="display: none;" class="hamburguer">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="hero">
