@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+h3 {
+    text-align: center
+}
+.header {
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+    min-height: 70px;
+    margin-bottom: 10px;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo-img {
+    height: 70px;
+    width: 100px;
+
+}
+.title-header {
+    font-size: 1.5rem;
+    margin-left: 30px;
+    width: max-content;
+}
+.button-form {
+    background-color: black;
+    color: white;
+}
+.hamburguer {
+    color: black;
+    font-size: 1.7rem;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+.list-menu {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: center;
+    background-color: white;
+    padding: 1px;
+}
+.list-menu li {
+    display: flex;
+    align-self: center;
+    padding: 5px;
+    width: max-content;
+
+}
+#close {
+    display: none;
+}
+.hamburguer {
+    display: none;
+}
+nav ul li:hover {
+    cursor: pointer;
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    justify-content: space-between;
+}
+.form-new-transition {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: solid 1px;
+    padding: 10px;
+}
+.form-new-transition,
+input,
+select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button-form {
+    background-color: #333333;
+    color: white;
+}
+.inp-valor {
+    margin-bottom: 50px;
+}
+.extract{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+}
+.description-extract{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+}
+.description-extract div, span{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.linha-extract{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.linha1-extract {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.esq-linha1{
+    display: flex;
+    width: 400px
+}
+.extract span{
+    text-align: end;
+    display: block;
+}
+.value-linha1-extract {
+    text-align: end;
+}
+
+/*smartphone*/
+@media only screen and (max-width: 732px){
+
+    .header{
+        justify-content: space-around;
+    }
+    .list-menu{
+        position: fixed;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        background-color: #333333;
+        color: white;
+        right: 0;
+        top: 0;
+        margin: 0;
+        padding: 10px;
+
+        display: none;
+    }
+    .list-menu li{
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        justify-content: flex-end;
+    }
+    .list-menu hr{
+        display: none;
+    }
+    .list-menu .close {
+        display: flex;
+        color: white;
+    }
+    nav ul li:hover{
+        background-color: white;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+    .close:hover{
+        background-color: transparent;
+    }
+    #close{
+        display: flex;
+        align-content: flex-start;
+        padding: 10px;
+    }
+    .hamburguer{
+        display: flex;
+        align-content: flex-end;
+    }
+    .hero{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .form-new-transition{
+        width: 90%;
+        border: none
+    }
+    .extract {
+        width: 90%;
+    }
+}
+
+/*tablet*/
+@media only screen and (min-width:733px) and (max-width: 1024px){
+    .header{
+        justify-content: space-between;
+    }
+    .list-menu{
+        position: fixed;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        background-color: #333333;
+        color: white;
+        right: 0;
+        top: 0;
+        margin: 0;
+        padding: 10px;
+
+        display: none;
+    }
+    .list-menu li{
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        justify-content: flex-end;
+    }
+    .list-menu hr{
+        display: none;
+    }
+    .list-menu .close {
+        display: flex;
+        color: white;
+    }
+    nav ul li:hover{
+        background-color: white;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+    .close:hover{
+        background-color: transparent;
+    }
+    #close{
+        display: flex;
+        align-content: flex-start;
+        padding: 10px;
+    }
+    .hamburguer{
+        display: flex;
+        align-content: flex-end;
+    }
+    .form-new-transition{
+        width: 50%;
+    }
+    .extract {
+        width: 50%;
+    }
+    .linha1-extract {
+        display: flex;
+        justify-content: space-between;
+    }
+}
