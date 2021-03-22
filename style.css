@@ -140,6 +140,12 @@ select {
 
     .header{
         justify-content: space-around;
+        width: 100%;
+        padding: 0;
+    }
+    .title-header{
+        font-size: 1rem;
+        margin: 0;
     }
     .list-menu{
         position: fixed;
