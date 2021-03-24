@@ -16,47 +16,63 @@
 <body>
     <div class="content">
         <div class="header">
-            <div class="logo">
-                <img class="logo-img" src="img/logo.png" alt="logo" />
-                <span class="title-header">
-                    Controle Financeiro
-                </span>
-            </div>
-            <div class="menu">
-            <nav>
-                <ul class="list-menu">
-                    <i id="close" class="fas fa-times"></i>
-                    <li class>Limpar Dados</li>
-                    <hr>
-                    <li class>Cadastro de Transação</li>
-                    <hr>
-                    <li>Salvar no Servidor</li>
-                </ul>
-            </nav>
-            <div class="hamburguer">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="itens-header">
+                <div class="logo">
+                    <img class="logo-img" src="img/logo.png" alt="logo" />
+                </div>
+                <div class="title-header">
+                        Controle Financeiro
+                </div>
+                <div class="menu">
+                <nav>
+                    <ul class="list-menu">
+                        <i id="close" class="fas fa-times"></i>
+                        <li class>Limpar Dados</li>
+                        <hr>
+                        <li class>Cadastro de Transação</li>
+                        <hr>
+                        <li>Salvar no Servidor</li>
+                    </ul>
+                </nav>
+                <div class="hamburguer">
+                    <i class="fas fa-bars"></i>
+                </div>
+                </div>
             </div>
         </div>
         <div class="hero">
             <div class="form-new-transition">
-                <h3>Nova Transação</h3>
-                <label>Tipo Transação</label>
-                <select>
-                    <option>Compra</option>
-                    <option>Venda</option>
-                </select>
-                <label>Nome da Mercadoria</label>
-                <input type="text" />
-                <label>Valor</label>
-                <input type="number" class="inp-valor" placeholder="R$ 0,00"/>
-                <button class="button-form">
-                    Adicionar Transação
-                </button>
+                    <div class="title-transition">
+                    <span>
+                        Nova Transação
+                    </span>
+                    </div>
+                    <div class="itens-new-transition">
+                        <div class="line-new-transition 1">
+                            <label>Tipo Transação</label>
+                            <select>
+                                <option>Compra</option>
+                                <option>Venda</option>
+                            </select>
+                        </div>
+                        <div class="line-new-transition 2">
+                            <label>Nome da Mercadoria</label>
+                            <input type="text" />
+                        </div>
+                        <div class="line-new-transition 3">
+                            <label>Valor</label>
+                            <input type="number" class="inp-valor" placeholder="R$ 0,00"/>
+                        </div>
+                    </div>
+                    <div class="button-form">
+                        <a #>Adicionar Transação</a>
+                    </div>
             </div>
             <div class="extract">
-                <h3>Extrato de Transação</h3>
-                <div>
+                <span class="title-extract">
+                    Extrato de Transação
+                </span>
+                <div class="content-extract">
                     <div class="description-extract">
                         <div class="title-extract">
                             Mercadoria
@@ -120,7 +136,7 @@
                             R$ 12.909,99
                         </div>
                     </div>
-                    <span>
+                    <span class="profit">
                         [Lucro]
                     </span>
                 </div>
