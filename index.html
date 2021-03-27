@@ -10,71 +10,72 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Primeiro Proketo New tab Academy" />
+    <meta name="description" content="Primeiro Projeto New tab Academy" />
 </head>
 
 <body>
     <div class="content">
+        <!-- header -->
         <div class="header">
             <div class="itens-header">
                 <div class="logo">
-                    <img class="logo-img" src="img/logo.png" alt="logo" />
+                    <a href="#" class="brand"></a>
                 </div>
                 <div class="title-header">
                         Controle Financeiro
                 </div>
                 <div class="menu">
-                <nav>
-                    <ul class="list-menu">
-                        <i id="close" class="fas fa-times"></i>
-                        <li class>Limpar Dados</li>
-                        <hr>
-                        <li class>Cadastro de Transação</li>
-                        <hr>
-                        <li>Salvar no Servidor</li>
-                    </ul>
-                </nav>
+                        <nav class="navbar-menu">
+                            <ul class="list-menu">
+                                <a href="#" class="close">X</a>
+                                <li><a href="#">Limpar Dados</a></li>
+                                <hr>
+                                <li><a href="#">Cadastro de Transação</a></li>
+                                <hr>
+                                <li><a href="#">Salvar no Servidor</a></li>
+                            </ul>
+                        </nav>
                 <div class="hamburguer">
-                    <i class="fas fa-bars"></i>
+                    <a class="hamb" href="#"></a>
                 </div>
                 </div>
             </div>
         </div>
         <div class="hero">
-            <div class="form-new-transition">
-                    <div class="title-transition">
-                    <span>
-                        Nova Transação
-                    </span>
+            <!-- New Transaction -->
+            <form class="form-new-transaction">
+                <Span class="title-transaction">
+                    Nova Transação
+                </Span>
+                <div class="items-transaction">
+                    <div class="type-transaction">
+                        <label>Tipo de Transação</label>
+                        <select name="select" id="select">
+                            <option>Compra</option>
+                            <option>Venda</option>
+                        </select>
                     </div>
-                    <div class="itens-new-transition">
-                        <div class="line-new-transition 1">
-                            <label>Tipo Transação</label>
-                            <select>
-                                <option>Compra</option>
-                                <option>Venda</option>
-                            </select>
-                        </div>
-                        <div class="line-new-transition 2">
-                            <label>Nome da Mercadoria</label>
-                            <input type="text" />
-                        </div>
-                        <div class="line-new-transition 3">
-                            <label>Valor</label>
-                            <input type="number" class="inp-valor" placeholder="R$ 0,00"/>
-                        </div>
+                    <div class="name-transaction">
+                        <label>Nome da Mercadoria</label>
+                        <input type="text" placeholder="Input" required />
                     </div>
-                    <div class="button-form">
-                        <a #>Adicionar Transação</a>
+                    <div class="value-transaction">
+                        <label>Valor R$</label>
+                        <input type="number" placeholder="R$ 0,00" min="0.01" step="0.01" required />
                     </div>
-            </div>
+                </div>
+                <button class="button-form">
+                    Adicionar Transação
+                </button>
+            </form>
+            <!-- extract -->
             <div class="extract">
                 <span class="title-extract">
                     Extrato de Transação
                 </span>
                 <div class="content-extract">
                     <div class="description-extract">
-                        <div class="title-extract">
+                        <div class="sub.title-extract">
                             Mercadoria
                         </div>
                         <div>
@@ -124,7 +125,7 @@
                         </div>
                     </div>
                     <div class="description-extract-total">
-                        <div class="title-extract">
+                        <div class="sub.title-extract">
                             Total
                         </div>
                         <div>
