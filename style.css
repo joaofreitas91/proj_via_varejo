@@ -277,6 +277,9 @@ select{
         width: auto;
         border: none;
     }
+    .title-transaction{
+        display: none;
+    }
     .extract {
         width: 90%;
         border-top: solid 1px #979797;
