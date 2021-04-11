@@ -147,58 +147,63 @@ select{
 .button-form:hover{
     cursor: pointer;
 }
+
+em{
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
 /* Extract */
 .extract{
     display: flex;
     flex-direction: column;
-    width: 60%;
     padding: 10px;
+    margin: 5px;
+    width: 60%;
 }
 .title-extract{
+    text-align: center;
     font-size: 1.2rem;
     font-weight: 700;
-    text-align: center;
-}
-.sub.title-extract{
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
 }
 .description-extract{
     display: flex;
     justify-content: space-between;
-    align-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 1rem 1rem;
+    padding-right: 15px;
+    border-bottom:1px solid #333333 ;
 }
-.linha1-extract{
+table{
+    border-collapse: collapse;
+}
+td{
+    border-bottom:1px solid#333333 ;
+    padding: 1px 1px;
+
+}
+.signal-left{
+    text-align: center;
+}
+.text-left{
+    text-align: start;
+}
+.text-right{
+    text-align: end;
+}
+.text-center{
+    text-align: center;
+}
+
+.description-extract-total{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #979797;
-    padding: 10px 1rem;
-}
-.esq-linha1{
-    display: flex;
-}
-.value-linha1-extract{
-    display: flex;
-    white-space: nowrap;
+    border-top:1px solid #333333 ;
+    margin-top: 10px;
 }
 .profit{
     display: flex;
     justify-content: flex-end;
-    padding: 0rem 1rem;
-}
-.description-extract-total{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    border-top: 1px solid #979797;
-    margin-top: 5px;
-    padding: 2px 1rem;
 }
 /*smartphone*/
 @media only screen and (max-width: 497px){

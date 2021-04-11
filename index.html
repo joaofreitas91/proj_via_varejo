@@ -43,102 +43,78 @@
         </div>
         <div class="hero">
             <!-- New Transaction -->
-            <form class="form-new-transaction">
-                <Span class="title-transaction">
+            <form id="meuForm" class="form-new-transaction">
+                
+                <Span class="title-transaction" >
                     Nova Transação
                 </Span>
-                <div class="items-transaction">
+                
+                <div class="items-transaction" id="items-transaction">
+                    
                     <div class="type-transaction">
                         <label>Tipo de Transação</label>
-                        <select name="select" id="select">
-                            <option>Compra</option>
-                            <option>Venda</option>
+                        <select id="typeTransaction" name="typeTransaction">
+                            <option value="">Selecione</option>
+                            <option value="1">Compra</option>
+                            <option value="2" >Venda</option>
                         </select>
+                        <em class="hidden"> Esse campo é Obrigatório!!!</em>
                     </div>
+                    
                     <div class="name-transaction">
                         <label>Nome da Mercadoria</label>
-                        <input type="text" placeholder="Input" required />
+                        <input type="text" placeholder="Input" id="nameTransaction" name="nameTransaction"/>
+                        <em class="hidden"> Esse campo é Obrigatório!!!</em>
                     </div>
+                    
                     <div class="value-transaction">
                         <label>Valor R$</label>
-                        <input type="number" placeholder="R$ 0,00" min="0.01" step="0.01" required />
+                        <input type="number" placeholder="R$ 0,00" step="0.01" id="valueTransaction" name="valueTransaction" min="0,01"/>
+                        <em class="hidden"> Esse campo é Obrigatório!!!</em>
                     </div>
+
                 </div>
-                <button class="button-form">
+
+                <button type="submit"  class="button-form" id="submit">
                     Adicionar Transação
                 </button>
             </form>
+            
             <!-- extract -->
+            
             <div class="extract">
                 <span class="title-extract">
                     Extrato de Transação
                 </span>
-                <div class="content-extract">
-                    <div class="description-extract">
-                        <div class="sub.title-extract">
-                            Mercadoria
-                        </div>
-                        <div>
-                            Valor
-                        </div>
+                    
+                <div class="description-extract">
+                    <div class="sub.title-extract">
+                        Mercadoria
                     </div>
-                    <div class="linha1-extract one">
-                        <div class="esq-linha1">
-                            <div>
-                                +
-                            </div>
-                            <div>
-                                Lorem ipsum dolor sit, amet
-                                consectetur
-                            </div>
-                        </div>
-                        <div class="value-linha1-extract">
-                            R$ 12.999,99
-                        </div>
+                    <div>
+                        Valor
                     </div>
-                    <div class="linha1-extract two">
-                        <div class="esq-linha1">
-                            <div>
-                                +
-                            </div>
-                            <div>
-                                Lorem ipsum dolor sit, amet
-                                consectetur
-                            </div>
-                        </div>
-                        <div class="value-linha1-extract">
-                            R$ 12.999,99
-                        </div>
-                    </div>
-                    <div class="linha1-extract three">
-                        <div class="esq-linha1">
-                            <div>
-                                +
-                            </div>
-                            <div>
-                                Lorem ipsum dolor sit, amet
-                                consectetur
-                            </div>
-                        </div>
-                        <div class="value-linha1-extract">
-                            R$ 12.999,99
-                        </div>
-                    </div>
-                    <div class="description-extract-total">
-                        <div class="sub.title-extract">
-                            Total
-                        </div>
-                        <div>
-                            R$ 12.909,99
-                        </div>
-                    </div>
-                    <span class="profit">
-                        [Lucro]
-                    </span>
                 </div>
+                <table class="tbody" id="tbody">
+                    <tr class="line-tbody">
+                        <td class="text-center">Por favor, adicione uma transação!</td>
+                    </tr>
+                </table>
+                <div class="description-extract-total">
+                    <div class="sub.title-extract">
+                        Total
+                    </div>
+                    <div>
+                        R$ 12.909,99
+                    </div>
+                </div>
+                <span class="profit">
+                    [Lucro]
+                </span>
             </div>
         </div>
     </div>
-</body>
 
+    <script src="./index.js"></script>
+</body>
 </html>
