@@ -51,26 +51,26 @@
                 
                 <div class="items-transaction" id="items-transaction">
                     
-                    <div class="type-transaction">
+                    <div class="type-transaction form-input">
                         <label>Tipo de Transação</label>
-                        <select id="typeTransaction" name="typeTransaction">
+                        <select onchange="clearErrors()" id="typeTransaction" name="typeTransaction">
                             <option value="">Selecione</option>
                             <option value="1">Compra</option>
                             <option value="2" >Venda</option>
                         </select>
-                        <em class="hidden"> Esse campo é Obrigatório!!!</em>
+                        <em class="hidden"> Selecione uma Transação!!!</em>
                     </div>
                     
-                    <div class="name-transaction">
+                    <div class="name-transaction form-input">
                         <label>Nome da Mercadoria</label>
-                        <input type="text" placeholder="Input" id="nameTransaction" name="nameTransaction"/>
-                        <em class="hidden"> Esse campo é Obrigatório!!!</em>
+                        <input onfocus="clearErrors()" type="text" placeholder="Escreva um Nome" id="nameTransaction" name="nameTransaction"/>
+                        <em class="hidden"> Preencha o Nome da Mercadoria!!!</em>
                     </div>
                     
-                    <div class="value-transaction">
+                    <div class="value-transaction form-input">
                         <label>Valor R$</label>
-                        <input type="number" placeholder="R$ 0,00" step="0.01" id="valueTransaction" name="valueTransaction" min="0,01"/>
-                        <em class="hidden"> Esse campo é Obrigatório!!!</em>
+                        <input onfocus="clearErrors()"type="number" placeholder="R$ 0,00" step="0.01" id="valueTransaction" name="valueTransaction" min="0,01"/>
+                        <em class="hidden"> Preencha o Valor da Mercadoria!!!</em>
                     </div>
 
                 </div>

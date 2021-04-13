@@ -3,6 +3,13 @@ if (produtos == null){
     produtos = [];
 }
 
+function clearErrors(){
+    [...document.querySelectorAll(".form-input em")].forEach((m) => {
+        m.classList.add("hidden")
+
+    })
+}
+
 reescreveLista()
 
 document.getElementById('nameTransaction').addEventListener('keyup', (ev) => {
@@ -51,10 +58,13 @@ function trataFormulario(e){
 
 
 function openMenu(){
-    if ([...document.querySelector(".list-menu").classList].indexOf("opened") == -1){
-        document.querySelector(".list-menu").classList.add("opened")
+
+    var menu = document.querySelector(".list-menu").classList
+
+    if ([...menu].indexOf("opened") == -1){
+        menu.add("opened")
     } else{
-        document.querySelector(".list-menu").classList.remove("opened")
+        menu.remove("opened")
     }
 }
 
