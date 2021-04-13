@@ -50,6 +50,15 @@ function trataFormulario(e){
 }
 
 
+function openMenu(){
+    if ([...document.querySelector(".list-menu").classList].indexOf("opened") == -1){
+        document.querySelector(".list-menu").classList.add("opened")
+    } else{
+        document.querySelector(".list-menu").classList.remove("opened")
+    }
+}
+
+
 document.getElementById("meuForm").addEventListener('submit', trataFormulario)
 
 function reescreveLista() {
