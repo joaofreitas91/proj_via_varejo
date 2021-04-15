@@ -33,7 +33,7 @@ function applyMask(evt) {
                 if ((value.length-i)%3 == 0 && value.slice(i-3, i)) {
                     valuefinal.push(value.slice(i-3, i))
                     lastIndex=i
-                }
+                }gl
             }
             // console.log(valuefinal)
             valufinalstring = valuefinal.reverse().join(".")
@@ -89,9 +89,13 @@ function trataFormulario(e){
     localStorage.setItem("produtos", JSON.stringify(produtos))
 
     console.log(produtos)
-    return false;
-}
 
+    document.querySelector("form").reset()
+    
+
+    return false;
+    
+}
 
 function openMenu(){
 
@@ -104,8 +108,34 @@ function openMenu(){
     }
 }
 
+function somaExtrato () {
+    var total = 0
+    
+    for (let index = 0; index < produtos.length; index ++) {
+        let valorASomar = parseFloat(produtos[index].valor.replace(/\./g,"").replace(/,/g,"."))
+        
+        console.log(valorASomar)
+        
+        if (produtos[index].tipo != 1){
+            valorASomar *= -1
+        }
 
-document.getElementById("meuForm").addEventListener('submit', trataFormulario)
+        total += valorASomar
+
+    }
+    
+    return total
+}
+
+function removeItem(evtn, index){
+    console.log(evtn)
+    console.log(index)
+
+    produtos.splice(index, 1)
+
+    localStorage.setItem("produtos", JSON.stringify(produtos))
+    reescreveLista()
+}
 
 function reescreveLista() {
 
@@ -118,7 +148,7 @@ function reescreveLista() {
         }
     
         document.querySelector("table").innerHTML += `
-        <tr>
+        <tr onclick="removeItem(event, `+ i +`)">
             <td class="signal-left">`+ typeTransaction +`</td>
             <td class="text-left">`+ produtos[i].nome +` </td>
             <td class="text-right">`+ 'R$ ' +produtos[i].valor +`</td>
@@ -133,4 +163,24 @@ function reescreveLista() {
         </tr>
         `
     }
+
+    total = somaExtrato()
+    lucroOuPrejuizo = "[LUCRO]"
+    
+    totalEscrito = "R$ "
+    totalEscrito += total
+
+    if (total <0){
+        lucroOuPrejuizo = "[PREJUÍZO]"
+    }
+
+    if (total == 0){
+        lucroOuPrejuizo = ""
+    }
+    
+    document.getElementById("totalTransaction").innerHTML = totalEscrito.replace("-" , "")
+    document.getElementById("profit").innerHTML = lucroOuPrejuizo
+    
 }
+
+document.getElementById("meuForm").addEventListener('submit', trataFormulario)
