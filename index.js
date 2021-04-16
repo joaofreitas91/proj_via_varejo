@@ -33,7 +33,7 @@ function applyMask(evt) {
                 if ((value.length-i)%3 == 0 && value.slice(i-3, i)) {
                     valuefinal.push(value.slice(i-3, i))
                     lastIndex=i
-                }gl
+                }
             }
             // console.log(valuefinal)
             valufinalstring = valuefinal.reverse().join(".")
