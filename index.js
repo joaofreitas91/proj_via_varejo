@@ -175,7 +175,9 @@ function reescreveLista() {
     totalEscrito += total
 
     if (total <0){
-        lucroOuPrejuizo = "[PREJUÍZO]"
+        lucroOuPrejuizo = `
+        <div class="red">[PREJUÍZO]</div>
+        `
     }
 
     if (total == 0){

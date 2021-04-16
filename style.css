@@ -208,6 +208,9 @@ td{
     display: flex;
     justify-content: flex-end;
 }
+.red{
+    color: red;
+}
 /*smartphone*/
 @media only screen and (max-width: 497px){
     .title-header{
