@@ -1,7 +1,11 @@
-var produtos = JSON.parse(localStorage.getItem("produtos"));
-if (produtos == null){
-    produtos = [];
-}
+// var produtos = JSON.parse(localStorage.getItem("produtos"));
+// if (produtos == null){
+//     produtos = [];
+// }
+
+let produtos = []
+pullAirTable()
+
 
 function clearErrors(){
     [...document.querySelectorAll(".form-input em")].forEach((m) => {
@@ -55,7 +59,7 @@ document.getElementById('nameTransaction').addEventListener('keyup', (ev) => {
 
 function trataFormulario(e){
     e.preventDefault()
-    console.log(e.target.elements)
+    // console.log(e.target.elements)
     
     
     if (e.target.elements.typeTransaction.value == ""){
@@ -181,6 +185,110 @@ function reescreveLista() {
     document.getElementById("totalTransaction").innerHTML = totalEscrito.replace("-" , "")
     document.getElementById("profit").innerHTML = lucroOuPrejuizo
     
+}
+var aluno = "2724"
+
+function salvaServidor(){
+
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico",{
+        headers: {
+            Authorization: "Bearer key2CwkHb0CKumjuM"
+        }
+    })
+    .then(response => response.json())
+    .then(responseJson => {
+        existe = responseJson.records.filter((record) => {
+            if (aluno == record.fields.Aluno) {
+                return true
+            }
+
+            return false
+        })
+
+        if (existe.length == 0) {
+            insereDados()
+        } else {
+            alteraDados(existe[0].id)
+        }
+
+    })
+
+}
+
+function insereDados() {
+    var json = JSON.stringify(produtos)
+
+    var body = JSON.stringify ({
+        "records": [
+          {
+            "fields": {
+            "Aluno": aluno,
+            "Json": json
+            }
+          }
+        ]
+      })
+
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+        method: "POST",
+        headers: {
+            Authorization: "Bearer key2CwkHb0CKumjuM",
+            "Content-Type" : "application/json"
+        },
+        body:body
+    })
+}
+
+function alteraDados(id) {
+    var json = JSON.stringify(produtos)
+
+    var body = JSON.stringify ({
+        "records": [
+          {
+            "id": id,
+            "fields": {
+            "Aluno": aluno,
+            "Json": json
+            }
+          }
+        ]
+      })
+
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+        method: "PATCH",
+        headers: {
+            Authorization: "Bearer key2CwkHb0CKumjuM",
+            "Content-Type" : "application/json"
+        },
+        body:body
+    })
+}
+
+function pullAirTable (){
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico",{
+        headers: {
+            Authorization: "Bearer key2CwkHb0CKumjuM"
+        }
+    })
+    .then(response => response.json())
+    .then(responseJson => {
+        existe = responseJson.records.filter((record) => {
+            if (aluno == record.fields.Aluno) {
+                return true
+            }
+
+            return false
+        })
+
+        if (existe.length == 0) {
+            produtos = []
+        } else {
+            produtos = JSON.parse(existe[0].fields.Json)
+        }
+
+        reescreveLista()
+
+    })
 }
 
 document.getElementById("meuForm").addEventListener('submit', trataFormulario)
