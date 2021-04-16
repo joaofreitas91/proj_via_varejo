@@ -118,7 +118,7 @@ function somaExtrato () {
     for (let index = 0; index < produtos.length; index ++) {
         let valorASomar = parseFloat(produtos[index].valor.replace(/\./g,"").replace(/,/g,"."))
         
-        console.log(valorASomar)
+        //console.log(valorASomar)
         
         if (produtos[index].tipo != 1){
             valorASomar *= -1
