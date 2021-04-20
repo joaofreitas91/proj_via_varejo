@@ -211,6 +211,28 @@ td{
 .red{
     color: red;
 }
+/* linkedin */
+
+.linkedin{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1112px;
+    margin: auto;
+}
+.LI-profile-badge{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    background:#E0E0E0;
+    border: solid 1px #333333;
+    border-radius: 4px;
+    padding: 10px 0px;
+    margin: 5px;
+}
+.vazio{
+    width: 60%;
+}
+
 /*smartphone*/
 @media only screen and (max-width: 497px){
     .title-header{
@@ -294,6 +316,18 @@ td{
     .extract {
         width: 90%;
         border-top: solid 1px #979797;
+    }
+    .linkedin{
+        display: flex;
+        justify-content: center;
+        background:#979797;
+    }
+    .LI-profile-badge{
+        padding: 5px;
+        width: auto;
+    }
+    .vazio{
+        display: none;
     }
 }
 /*tablet*/
@@ -416,7 +450,19 @@ select{
     }
 
 /* Extract */
-.extract{
+    .extract{
     width: auto;
+    }
+    .linkedin{
+        display: flex;
+        justify-content: center;
+        background:#979797;
+    }
+    .LI-profile-badge{
+        padding: 5px;
+        width: auto;
+    }
+    .vazio{
+        display: none;
     }
 }
