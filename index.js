@@ -171,8 +171,8 @@ function reescreveLista() {
     total = somaExtrato()
     lucroOuPrejuizo = "[LUCRO]"
     
-    totalEscrito = "R$ "
-    totalEscrito += total
+    totalEscrito = ""
+    totalEscrito += total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 
     if (total <0){
         lucroOuPrejuizo = `
